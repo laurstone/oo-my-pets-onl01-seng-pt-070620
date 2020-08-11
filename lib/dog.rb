@@ -1,21 +1,25 @@
 class Dog
-  attr_accessor :owner, :mood
+  # code goes here
+class Dog
+ attr_accessor :owner, :mood
   attr_reader :name
-  
+
   @@dogs = []
-  
+
+# instance methods
+
   def initialize(name, owner)
     @name = name
     @owner = owner
-    owner.dogs << self 
     @mood = "nervous"
     @@dogs << self
+    owner.dogs << self
   end
-  
 
-  
-  def self.all 
+# class methods
+
+  def self.all()
     @@dogs
   end
-  
+
 end
